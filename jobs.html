@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Openings - MetroJobs</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/MetroIcon.png" type="image/x-icon" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./Styles/style.css" />
+    <link rel="stylesheet" href="./Styles/jobs.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation will be loaded here by script.js -->
+
+    <main>
+      <!-- Hero Banner -->
+      <section class="jobs-hero" data-aos="fade-in" data-aos-duration="1000">
+        <div class="jobs-hero-content">
+          <h1 data-aos="fade-up" data-aos-delay="200">Find Your Perfect Job</h1>
+          <p data-aos="fade-up" data-aos-delay="400">
+            Browse through 43 opportunities from top employers across various
+            industries
+          </p>
+        </div>
+      </section>
+
+      <!-- Search & Filters -->
+      <section class="search-filters" data-aos="fade-up" data-aos-delay="600">
+        <div class="search-container">
+          <div
+            class="search-input-container"
+            data-aos="fade-right"
+            data-aos-delay="800"
+          >
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search by job title or keywords..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+          <button
+            class="search-button"
+            data-aos="fade-left"
+            data-aos-delay="800"
+          >
+            Search
+          </button>
+        </div>
+        <div class="filter-container">
+          <select
+            class="filter-select"
+            id="industry-filter"
+            data-aos="fade-up"
+            data-aos-delay="1000"
+          >
+            <option value="all">All Industries</option>
+            <option value="it">IT Technical (5)</option>
+            <option value="warehouse">
+              Warehouse/Distribution/Delivery (5)
+            </option>
+            <option value="medical">Medical Service (6)</option>
+            <option value="food">Food Service (5)</option>
+            <option value="manufacturing">Manufacturing Production (2)</option>
+            <option value="hr">HR Office Accounting (4)</option>
+            <option value="skilled">Skilled Workers (10)</option>
+            <option value="retail">Retail Merchandising (6)</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Job Listings Grid -->
+      <section class="job-listings">
+        <div class="jobs-grid" id="jobs-container">
+          <!-- Jobs will be loaded here by JavaScript -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination-container" data-aos="fade-up">
+          <!-- Pagination will be loaded here by JavaScript -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer will be loaded here by script.js -->
+
+    <!-- Job Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="job-modal" id="job-modal">
+      <button class="close-modal" id="close-modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content" id="modal-content">
+        <!-- Modal content will be loaded here by JavaScript -->
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="jobs.js"></script>
+  </body>
+</html>

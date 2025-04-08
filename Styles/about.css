@@ -1,0 +1,481 @@
+/* About Us Page Specific Styles */
+.about-hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 166, 217, 0.8), rgba(0, 166, 217, 0.9)),
+    url("../Images/contact-bg.jpg") center/cover no-repeat;
+  color: var(--white);
+  padding: 0 20px;
+  opacity: 0;
+  animation: quickFadeIn 0.3s ease forwards;
+}
+
+@keyframes quickFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: quickFadeIn 0.3s ease forwards 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-text {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  margin-right: 10px;
+}
+
+.metrojobs-title {
+  font-family: "CustomFont", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  color: var(--white);
+}
+
+.metrojobs-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--accenttwo);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fillKaraoke 1.5s ease-in-out forwards 0.6s;
+}
+
+@keyframes fillKaraoke {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards 1.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Company Overview */
+.company-overview {
+  padding: 80px 20px;
+  background-color: var(--white);
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.overview-text {
+  text-align: center;
+}
+
+.overview-text h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.overview-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Image Slider */
+.image-slider {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+.slider-container {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Our Clients Section */
+.our-clients {
+  padding: 80px 20px;
+  background-color: var(--white);
+}
+
+.clients-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.clients-container h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.client-card {
+  background: var(--bg-light);
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  background: var(--primary);
+  color: white;
+}
+
+.client-card:hover h3 {
+  color: white;
+}
+
+.client-card:hover .client-icon {
+  color: var(--accent);
+  transform: scale(1.2);
+}
+
+.client-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.client-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  padding: 80px 20px;
+  background-color: var(--bg-light);
+}
+
+.mv-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+.mv-section:last-child {
+  margin-bottom: 0;
+}
+
+.mv-section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 3rem;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mv-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-top: 5px solid var(--primary);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--accent);
+}
+
+.mv-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mv-card h3 i {
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+}
+
+.mv-card:hover h3 i {
+  transform: rotate(10deg) scale(1.1);
+  color: var(--accent);
+}
+
+.mv-card p,
+.mv-card ul {
+  line-height: 1.8;
+  text-align: left;
+}
+
+.mv-card ul {
+  padding-left: 20px;
+}
+
+.mv-card li {
+  margin-bottom: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 166, 217, 0.9), rgba(0, 166, 217, 0.9)),
+    url("../Images/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 15px 30px;
+  min-width: 180px;
+  text-align: center;
+}
+
+.cta-buttons .btn.secondary {
+  background: transparent;
+  border: 2px solid var(--white);
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .about-hero h1 {
+    font-size: 3rem;
+  }
+
+  .slider-container {
+    height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 70vh;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem; /* Changed from 2.2rem to match home page */
+    flex-direction: column;
+  }
+
+  .about-text {
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 2.5rem; /* Adjusted to match h1 size */
+  }
+
+  .metrojobs-title {
+    font-size: 2.5rem; /* Changed from 2rem to match home page */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem; /* Matches home page */
+  }
+
+  .mv-card {
+    padding: 25px;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .slider-container {
+    height: 300px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Text alignment adjustments for mobile */
+  .overview-text p,
+  .mv-card p,
+  .mv-card ul {
+    text-align: center;
+  }
+
+  .mv-card h3 {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    height: 60vh;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem; /* Changed from 1.8rem to match home page */
+  }
+
+  .about-text {
+    font-size: 2rem; /* Adjusted to match h1 size */
+  }
+
+  .metrojobs-title {
+    font-size: 2rem; /* Changed from 1.8rem to match home page */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem; /* Matches home page */
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn,
+  .cta-buttons .btn.secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .client-card {
+    padding: 30px 20px;
+  }
+
+  .client-icon {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,514 @@
+/* Modern Facilities Page */
+.facilities-hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 166, 217, 0.8), rgba(0, 166, 217, 0.9)),
+    url("../Images/contact-bg.jpg") center/cover no-repeat;
+  color: var(--white);
+  padding: 0 20px;
+  opacity: 0;
+  animation: quickFadeIn 0.3s ease forwards;
+}
+
+@keyframes quickFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.facilities-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: quickFadeIn 0.3s ease forwards 0.3s;
+}
+
+.facilities-text {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  margin-right: 10px;
+}
+
+.metrojobs-title {
+  font-family: "CustomFont", sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  color: var(--white);
+}
+
+.metrojobs-title::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--accenttwo);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: fillKaraoke 1.5s ease-in-out forwards 0.6s;
+}
+
+@keyframes fillKaraoke {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards 1.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Branch Sections - EDGE TO EDGE */
+.branch-section {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branch-section.accent-bg {
+  background-color: #f8f9fa;
+}
+
+.branch-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.branch-header h2 {
+  color: #00a6d9;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.branch-header h2 i {
+  color: #e4161c;
+}
+
+.branch-header p {
+  font-size: 1.1rem;
+  color: #222;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Branch Content - NO SIDE SPACING */
+.branch-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.branch-content.reverse {
+  direction: rtl;
+}
+
+.branch-content.reverse > * {
+  direction: ltr;
+}
+
+.branch-description {
+  padding: 0 20px;
+}
+
+.branch-description h3 {
+  color: #00a6d9;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.branch-description p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #222;
+  font-size: 1.1rem;
+}
+
+/* FULL WIDTH IMAGE CONTAINER */
+.branch-image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+}
+
+/* EDGE-TO-EDGE IMAGE */
+.clickable-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+}
+
+.clickable-image:hover {
+  transform: translateY(-5px);
+}
+
+/* Image Viewer Styles */
+.image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.image-viewer.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.viewer-content {
+  position: relative;
+  width: 90%;
+  max-height: 90vh;
+  text-align: center;
+}
+
+.viewer-image {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.viewer-caption {
+  color: white;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.viewer-counter {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-arrow {
+  left: 30px;
+}
+
+.next-arrow {
+  right: 30px;
+}
+
+/* CTA Section */
+.facilities-cta {
+  padding: 100px 20px;
+  background: linear-gradient(rgba(0, 166, 217, 0.9), rgba(0, 166, 217, 0.9)),
+    url("../Images/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.facilities-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.facilities-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-buttons .btn {
+  background-color: #e4161c;
+  color: white;
+}
+
+.cta-buttons .btn.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-buttons .btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .branch-section {
+    padding: 80px 0;
+  }
+
+  .facilities-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .branch-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
+  }
+
+  .branch-image {
+    padding-bottom: 75%;
+    border-radius: 0;
+  }
+
+  .branch-content.reverse {
+    direction: ltr;
+  }
+
+  .branch-description {
+    padding: 0;
+  }
+
+  /* Center all text in mobile */
+  .branch-description h3,
+  .branch-description p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Center ALL H2 elements in mobile */
+  h2 {
+    text-align: center !important;
+  }
+
+  .facilities-hero {
+    height: 70vh;
+  }
+
+  .facilities-hero h1 {
+    font-size: 2.2rem;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    padding: 0 15px;
+  }
+
+  .branch-header h2 {
+    font-size: 1.8rem;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .branch-section {
+    padding: 60px 0;
+  }
+
+  .branch-image {
+    padding-bottom: 100%;
+  }
+
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .prev-arrow {
+    left: 15px;
+  }
+
+  .next-arrow {
+    right: 15px;
+  }
+
+  .close-viewer {
+    top: 20px;
+    right: 20px;
+  }
+
+  .facilities-cta {
+    padding: 70px 20px;
+  }
+
+  .facilities-cta h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .branch-section {
+    padding: 40px 0;
+  }
+
+  .facilities-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .branch-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .branch-description h3 {
+    font-size: 1.5rem;
+  }
+
+  .branch-description p {
+    font-size: 1rem;
+  }
+
+  .viewer-content {
+    width: 95%;
+  }
+
+  .viewer-image {
+    max-height: 60vh;
+  }
+
+  .viewer-caption {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .facilities-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .branch-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .branch-description h3 {
+    font-size: 1.3rem;
+  }
+
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
