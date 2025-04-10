@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       directionsLink:
         "https://www.google.com/maps/place/Metro+Jobs+%26+Payment+Solutions,+Incorporated/@14.6159672,121.0506521,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b794a166e319:0x6651aa86fc154b2f!8m2!3d14.6159672!4d121.053227!16s%2Fg%2F11qprj7l2y?entry=ttu",
       contactPerson: "Ms. Shine / Ms. Riza / Ms. Merla",
-      contactPersonNumber: "0920 564 4917",
     },
     bulacan: {
       name: "Bulacan Branch",
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
       directionsLink:
         "https://www.google.com/maps/place/Lysa+Queen+Bldg/@14.8420912,120.8450284,17z/data=!3m1!4b1!4m6!3m5!1s0x339653aa3030c62f:0x92ebf62f98b2e74b!8m2!3d14.8420912!4d120.8476033!16s%2Fg%2F11qprj7l2y?entry=ttu",
       contactPerson: "Ram Esguerra",
-      contactPersonNumber: "0917-1425835",
     },
     pampanga: {
       name: "Pampanga Branch",
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
       directionsLink:
         "https://www.google.com/maps/place/LRK+Comml+Bldg/@15.0434854,120.6824835,17z/data=!3m1!4b1!4m6!3m5!1s0x3396f7593fe23037:0x4e633056d330f8dc!8m2!3d15.0434854!4d120.6850584!16s%2Fg%2F11c5q5t5qy?entry=ttu",
       contactPerson: "Ms. Joanne Adriatico",
-      contactPersonNumber: "0927 499 3328",
     },
     visayas: {
       name: "Visayas Branch",
@@ -99,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
       directionsLink:
         "https://www.google.com/maps/place/Esperanza+Bldg./@10.333204,123.9413761,17z/data=!3m1!4b1!4m6!3m5!1s0x33a9984dae7d2653:0xf05d58154e0b696f!8m2!3d10.3332039!4d123.943951!16s%2Fg%2F11qprj7l2y?entry=ttu",
       contactPerson: "Rowena Bate / Kent Galan",
-      contactPersonNumber: "0933 042 7997 / 0938 011 7944",
     },
   };
 
