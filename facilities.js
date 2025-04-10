@@ -13,117 +13,39 @@ document.addEventListener("DOMContentLoaded", function () {
   // Image viewer functionality
   const branchImages = {
     cubao: [
-      { src: "./Images/RegaliaParkTowers.jpg", alt: "Regalia Park Tower" },
-      {
-        src: "./Images/MetroJobsCubaoBranch/2nd.jpg",
-        alt: "Accounting Reception",
-      },
-      {
-        src: "./Images/01.jpg",
-        alt: "Conference Room",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/3rd.jpg",
-        alt: "Accounting Office",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/4th.jpg",
-        alt: "Metro Jobs G-03 Office 1st View",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/5th.jpg",
-        alt: "Metro Jobs G-03 Office 2nd View",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/6th.jpg",
-        alt: "Metro Jobs G-03 Office 2nd Floor",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/7th.jpg",
-        alt: "Metro Jobs G-04 Office 1st Floor",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/8th.jpg",
-        alt: "Metro Jobs G-04 Office 2nd Floor",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/9th.jpg",
-        alt: "Metro Jobs G-05 Office 1st Floor",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/MetroJobsAccounting.jpg",
-        alt: "Metro Jobs Accountinng",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/MetroJobsG-03.jpg",
-        alt: "Metro Jobs G-03 Office Front",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/MetroJobsG-04.jpg",
-        alt: "Metro Jobs G-04 Office Front",
-      },
-      {
-        src: "./Images/MetroJobsCubaoBranch/MetrojobsG-05.jpg",
-        alt: "Metro Jobs G-05 Office Front",
-      },
+      { src: "./Images/RegaliaParkTowers.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/2nd.jpg" },
+      { src: "./Images/01.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/3rd.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/4th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/5th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/6th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/7th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/8th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/9th.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/MetroJobsAccounting.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/MetroJobsG-03.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/MetroJobsG-04.jpg" },
+      { src: "./Images/MetroJobsCubaoBranch/MetrojobsG-05.jpg" },
     ],
     bulacan: [
-      {
-        src: "./Images/MetroJobsBulacan Branch/LYSAQUEENBLDG.PNG",
-        alt: "Lysa Queen Bldg",
-      },
-      {
-        src: "./Images/MetroJobsBulacan Branch/Bulacan1st.png",
-        alt: "Bulacan Office Reception",
-      },
-      {
-        src: "./Images/MetroJobsBulacan Branch/Bulacan2nd.png",
-        alt: "Bulacan Work Area",
-      },
-      {
-        src: "./Images/MetroJobsBulacan Branch/Bulacan3rd.png",
-        alt: "Bulacan Meeting Room",
-      },
-      {
-        src: "./Images/MetroJobsBulacan Branch/Bulacan4th.png",
-        alt: "Bulacan Lounge",
-      },
+      { src: "./Images/MetroJobsBulacan Branch/LYSAQUEENBLDG.PNG" },
+      { src: "./Images/MetroJobsBulacan Branch/Bulacan1st.png" },
+      { src: "./Images/MetroJobsBulacan Branch/Bulacan2nd.png" },
+      { src: "./Images/MetroJobsBulacan Branch/Bulacan3rd.png" },
+      { src: "./Images/MetroJobsBulacan Branch/Bulacan4th.png" },
     ],
     pampanga: [
-      {
-        src: "./Images/MetroJobsPampanga Branch/LRKCommlBldg.PNG",
-        alt: "LRK Comml Bldg",
-      },
-      {
-        src: "./Images/MetroJobsPampanga Branch/Pampanga1st.png",
-        alt: "Pampanga Office Front",
-      },
-      {
-        src: "../Images/MetroJobsPampanga Branch/Pampanga2nd.png",
-        alt: "Pampanga Work Area",
-      },
+      { src: "./Images/MetroJobsPampanga Branch/LRKCommlBldg.PNG" },
+      { src: "./Images/MetroJobsPampanga Branch/Pampanga1st.png" },
+      { src: "../Images/MetroJobsPampanga Branch/Pampanga2nd.png" },
     ],
     visayas: [
-      {
-        src: "./Images/MetroJobsVisayasBranch/Visayas Esperanza Bldg.jpg",
-        alt: "Visayas Branch Esperanza Bldg",
-      },
-      {
-        src: "./Images/MetroJobsVisayasBranch/Visayas1st.png",
-        alt: "Visayas Office Building",
-      },
-      {
-        src: "./Images/MetroJobsVisayasBranch/Visayas2nd.png",
-        alt: "Visayas Office Front",
-      },
-      {
-        src: "./Images/MetroJobsVisayasBranch/Visayas3rd.png",
-        alt: "Visayas Office 1st View",
-      },
-      {
-        src: "./Images/MetroJobsVisayasBranch/Visayas4th.png",
-        alt: "Visayas Office 2nd View",
-      },
+      { src: "./Images/MetroJobsVisayasBranch/Visayas Esperanza Bldg.jpg" },
+      { src: "./Images/MetroJobsVisayasBranch/Visayas1st.png" },
+      { src: "./Images/MetroJobsVisayasBranch/Visayas2nd.png" },
+      { src: "./Images/MetroJobsVisayasBranch/Visayas3rd.png" },
+      { src: "./Images/MetroJobsVisayasBranch/Visayas4th.png" },
     ],
   };
 
@@ -161,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateViewerImage() {
     const image = currentImages[currentIndex];
     viewerImage.src = image.src;
-    viewerCaption.textContent = image.alt;
+    viewerCaption.textContent = ""; // Empty the caption
     viewerCounter.textContent = `${currentIndex + 1}/${currentImages.length}`;
   }
 

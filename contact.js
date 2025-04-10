@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
   AOS.init({
     duration: 600,
     easing: "ease-out-quad",
-    once: false, // Allow animations to replay
+    once: false,
     offset: 100,
     disable: function () {
-      return false; // Always enable animations, even on mobile
+      return false;
     },
   });
 
@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const branches = {
     cubao: {
       name: "Cubao Branch (Main)",
-      phone: "+63 2 8912 0242",
-      mobiles: ["0920 564 4917", "0916 209 5293"],
+      telephoneNumber: "+63 2 8372 4595",
+      telephoneNumber2: "Local 303 & 304",
+      mobileNumbers: ["0920 564 4917", "0916 209 5293"],
       address:
         "150 P. Tuazon Avenue corner EDSA, Regalia Park Towers, Units G-03, G-04, G-05, Cubao, Quezon City, Philippines",
       emails: ["hrd.teamwhel@gmail.com", "jdescolano.metrojobs@gmail.com"],
@@ -34,13 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.703355899629!2d121.05065207384203!3d14.615967176702815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b794a166e319%3A0x6651aa86fc154b2f!2sMetro%20Jobs%20%26%20Payment%20Solutions%2C%20Incorporated!5e0!3m2!1sen!2sph!4v1742804346824!5m2!1sen!2sph",
       directionsLink:
         "https://www.google.com/maps/place/Metro+Jobs+%26+Payment+Solutions,+Incorporated/@14.6159672,121.0506521,17z/data=!3m1!4b1!4m6!3m5!1s0x3397b794a166e319:0x6651aa86fc154b2f!8m2!3d14.6159672!4d121.053227!16s%2Fg%2F11qprj7l2y?entry=ttu",
-      contactPerson: "HR Shine / RG Eagle Whel MetroJobs ",
-      contactPersonNumber: "09205644917 or 09162095293",
+      contactPerson: "Ms. Shine / Ms. Riza / Ms. Merla",
+      contactPersonNumber: "0920 564 4917",
     },
     bulacan: {
       name: "Bulacan Branch",
-      phone: "+63 44-761-1133",
-      mobiles: ["0915 846 8822", "0917 142 5835"],
+      telephoneNumber: "+63 44-761-1133",
+      mobileNumbers: ["0915 846 8822", "0917 142 5835"],
       address:
         "3rd Flr. LYSA Queen Bldg. Mac Arthur Highway, Brgy. San Pablo, Malolos City, Bulacan, 3000",
       emails: ["resguerra@metrojobs.com.ph"],
@@ -59,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     pampanga: {
       name: "Pampanga Branch",
-      phone: "+63 45-404-6766",
-      mobiles: ["0927 499 3328"],
+      telephoneNumber: "+63 45-404-6766",
+      mobileNumbers: ["0927 499 3328"],
       address:
         "Unit 1.C LRK Bldg. Jose Abad Santos Ave. Brgy. Lagundi, Mexico Pampanga, 2021",
       emails: ["jfajardo@metrojobs.com.ph"],
@@ -79,8 +80,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     visayas: {
       name: "Visayas Branch",
-      phone: "+63 32-236-5559",
-      mobiles: ["0933 042 7997", "0938 011 7944"],
+      telephoneNumber: "+63 32-236-5559",
+      mobileNumbers: ["0933 042 7997", "0938 011 7944"],
       address:
         "2nd Flr. Esperanza Bldg. AC Cortez Ave., Barangay Ibabao Estancia, Mandaue, Cebu City, 6014",
       emails: [
@@ -104,36 +105,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // DOM elements
   const branchSelect = document.getElementById("branch-select");
-  const phoneNumber = document.querySelector(".phone-number");
-  const mobileNumbers = document.querySelectorAll(".mobile-number");
   const address = document.querySelector(".address");
-  const emails = document.querySelectorAll(".email");
-  const facebookLinks = document.querySelectorAll(".facebook-link");
-  const branchMap = document.getElementById("branch-map");
-  const directionsLink = document.getElementById("directions-link");
+  const telephoneNumber = document.querySelector(".telephone-number");
+  const telephoneNumber2 = document.querySelector(".telephone-number-2");
   const contactPerson = document.querySelector(".contact-person");
   const contactPersonNumber = document.querySelector(".contact-person-number");
+  const mobileNumber = document.querySelector(".mobile-number");
+  const mobileNumber2 = document.querySelector(".mobile-number-2");
+  const email = document.querySelector(".email");
+  const email2 = document.querySelector(".email-2");
+  const facebookLink = document.querySelector(".facebook-link");
+  const facebookLink2 = document.querySelector(".facebook-link-2");
+  const facebookLink3 = document.querySelector(".facebook-link-3");
+  const branchMap = document.getElementById("branch-map");
+  const directionsLink = document.getElementById("directions-link");
 
-  // Function to replay animations with improved handling
-  function replayAnimations() {
-    const animatedElements = document.querySelectorAll("[data-aos]");
-
-    animatedElements.forEach((el) => {
-      // Remove the animation class
-      el.classList.remove("aos-animate");
-
-      // Force reflow
-      void el.offsetWidth;
-
-      // Add the animation class back
-      el.classList.add("aos-animate");
-    });
-
-    // Refresh AOS to detect new elements
-    AOS.refreshHard();
-  }
-
-  // Update branch information with animation support
+  // Function to update branch information
   function updateBranchInfo(branchId) {
     const branch = branches[branchId];
 
@@ -146,31 +133,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update content after a brief delay
     setTimeout(() => {
-      phoneNumber.textContent = branch.phone;
-      mobileNumbers.forEach((el, index) => {
-        el.textContent = branch.mobiles[index] || "";
-      });
       address.textContent = branch.address;
-      emails.forEach((el, index) => {
-        el.textContent = branch.emails[index] || "";
-      });
+      telephoneNumber.textContent = branch.telephoneNumber;
+      if (telephoneNumber2) {
+        telephoneNumber2.textContent = branch.telephoneNumber2 || "";
+      }
+      contactPerson.textContent = branch.contactPerson;
+      contactPersonNumber.textContent = branch.contactPersonNumber;
+      mobileNumber.textContent = branch.mobileNumbers[0] || "";
+      mobileNumber2.textContent = branch.mobileNumbers[1] || "";
+      email.textContent = branch.emails[0] || "";
+      email2.textContent = branch.emails[1] || "";
 
-      facebookLinks.forEach((el, index) => {
-        if (branch.facebookLinks[index]) {
-          el.href = branch.facebookLinks[index].url;
-          el.innerHTML = `<i class="fab fa-facebook"></i> ${branch.facebookLinks[index].text}`;
-          el.style.display = "flex";
-        } else {
-          el.style.display = "none";
-        }
-      });
+      // Update Facebook links
+      if (branch.facebookLinks[0]) {
+        facebookLink.href = branch.facebookLinks[0].url;
+        facebookLink.innerHTML = `<i class="fab fa-facebook"></i> ${branch.facebookLinks[0].text}`;
+        facebookLink.style.display = "flex";
+      } else {
+        facebookLink.style.display = "none";
+      }
+
+      if (branch.facebookLinks[1]) {
+        facebookLink2.href = branch.facebookLinks[1].url;
+        facebookLink2.innerHTML = `<i class="fab fa-facebook"></i> ${branch.facebookLinks[1].text}`;
+        facebookLink2.style.display = "flex";
+      } else {
+        facebookLink2.style.display = "none";
+      }
+
+      if (branch.facebookLinks[2]) {
+        facebookLink3.href = branch.facebookLinks[2].url;
+        facebookLink3.innerHTML = `<i class="fab fa-facebook"></i> ${branch.facebookLinks[2].text}`;
+        facebookLink3.style.display = "flex";
+      } else {
+        facebookLink3.style.display = "none";
+      }
 
       branchMap.src = branch.mapEmbed;
       directionsLink.href = branch.directionsLink;
-
-      if (contactPerson) contactPerson.textContent = branch.contactPerson || "";
-      if (contactPersonNumber)
-        contactPersonNumber.textContent = branch.contactPersonNumber || "";
 
       // Show elements again with animation
       contactMethods.forEach((method, index) => {
@@ -182,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Replay AOS animations
-      replayAnimations();
+      AOS.refresh();
     }, 300);
   }
 
