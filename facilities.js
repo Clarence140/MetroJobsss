@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       { src: "./Images/MetroJobsBulacan Branch/Bulacan4th.png" },
     ],
     pampanga: [
-      { src: "./Images/MetroJobsPampanga Branch/LRKCommlBldg.PNG" },
       { src: "./Images/MetroJobsPampanga Branch/Pampanga1st.png" },
       { src: "../Images/MetroJobsPampanga Branch/Pampanga2nd.png" },
     ],
