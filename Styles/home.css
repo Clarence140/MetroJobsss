@@ -97,14 +97,14 @@
 }
 
 .hero-btn.primary {
-  background-color: var(--accent);
-  color: var(--white);
-}
-
-.hero-btn.secondary {
   background-color: transparent;
   color: var(--white);
   border: 2px solid var(--white);
+}
+
+.hero-btn.secondary {
+  background-color: var(--accent);
+  color: var(--white);
 }
 
 .hero-btn:hover {
