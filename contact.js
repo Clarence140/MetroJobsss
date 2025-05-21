@@ -78,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
     visayas: {
       name: "Visayas Branch",
       telephoneNumber: "+63 32-236-5559",
-      mobileNumbers: ["0933 042 7997", "0938 011 7944"],
+      mobileNumbers: ["0933-0427997
+"],
       address:
         "2nd Flr. Esperanza Bldg. AC Cortez Ave., Barangay Ibabao Estancia, Mandaue, Cebu City, 6014",
       emails: [
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.108468236623!2d123.94137607420218!3d10.333203989789888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9984dae7d2653%3A0xf05d58154e0b696f!2sEsperanza%20Bldg.!5e0!3m2!1sen!2sph!4v1743577734430!5m2!1sen!2sph",
       directionsLink:
         "https://www.google.com/maps/place/Esperanza+Bldg./@10.333204,123.9413761,17z/data=!3m1!4b1!4m6!3m5!1s0x33a9984dae7d2653:0xf05d58154e0b696f!8m2!3d10.3332039!4d123.943951!16s%2Fg%2F11qprj7l2y?entry=ttu",
-      contactPerson: "Rowena Bate / Kent Galan",
+      contactPerson: "Maria Garing",
     },
   };
 
